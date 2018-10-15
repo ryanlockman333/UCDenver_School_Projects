@@ -1,0 +1,57 @@
+/*
+Ryan Lockman: 101430670
+CSCI 2421:001 Fall 2013
+array.cpp
+Description: Array template class definitions.
+*/
+
+// Copy Constructor
+template<class T>
+Array<T>::Array(const Array &rhs) {
+	data = new value_type[rhs.capacity];
+	capacity = rhs.capacity;
+	used = rhs.used;
+	copy(rhs.data, rhs.data + used, data);
+}
+	
+// Assignment Operator
+template<class T>
+Array<T>& Array<T>::operator=(const Array rhs) {
+	if(this == &rhs)
+		return;
+		
+	if(capacity != rhs.capacity) {
+		value_type *tmp = new value_type[rhs.capacity];
+		delete [] data;
+		data = tmp;
+		capacity = rhs.capacity;
+	}
+	
+	used = rhs.used;
+	copy(rhs.data, rhs.data + used, data);
+}
+	
+// Operator Overload Functions
+template<class T>
+value_type& Array<T>::operator[](int idx) {
+	if(idx > size() || idx < 0) {
+		std::cout << "\nIndex out of bounds, returning first element.\n"; 
+        return data[0];
+	}
+	return data[idx];
+}
+
+template<class T>
+const value_type& Array<T>::operator[](int idx) const {
+	if(idx > size() || idx < 0) {
+		std::cout << "\nIndex out of bounds, returning first element.\n"; 
+        return data[0];
+	}
+	return data[idx];
+}
+
+template<class T>
+Array<T>& Array<T>::operator+=(const Array &rhs) {
+    // actual addition of rhs to *this
+    return *this;
+}

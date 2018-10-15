@@ -1,0 +1,75 @@
+/*
+Ryan Lockman: 101430670
+CSCI 2421:001 Fall 2013
+hw6functions.cpp
+Description: Global function definitions.
+*/
+
+// Headers
+#include <iostream>
+#include <cstdlib>
+#include <iomanip>
+#include <cassert>
+
+// Global Functions
+template<typename T>
+void recursiveSort(T *elems, unsigned size) {
+	assert(size >= 0);
+
+    int maxIdx = 0, tmp = 0;
+	
+    for(int i = maxIdx; i < size; ++i)
+        if(elems[i] > elems[maxIdx])
+            maxIdx = i;
+
+    tmp 	      = elems[size-1];
+    elems[size-1] = elems[maxIdx];
+    elems[maxIdx] = tmp;
+ 
+    if(size > 1)
+        recursiveSort(elems, --size);
+}
+
+template<typename T>
+void fillArray(T* elems, const unsigned size, const int low, const int high) {
+	assert(size >= 0);
+
+	std::srand((unsigned)time(NULL));
+	for(int i = 0; i < size; ++i)
+		elems[i] = (std::rand() % (high-low+1)) + low;
+}
+
+template<typename T>
+void printArray(const T *elems, const unsigned size) {
+	assert(size >= 0);
+
+	unsigned count = 0;
+	
+	std::cout << std::endl;
+	for(int i = 0; i < size; ++i) {
+		if(count < 15) {
+			std::cout << elems[i] << std::setw(4);
+			++count;
+		}
+		else {
+			std::cout << "\n";
+			count = 0;
+		}
+	}
+	std::cout << std::endl;
+}
+
+void recurPatternPrint(unsigned length, int count) {
+	for(int i = 0; i < count; ++i)
+		std::cout << "*";
+	std::cout << std::endl;
+  
+	++count;
+  
+	if(count < length)
+		recurPatternPrint(length, count);
+	
+	for(int i = 0; i < count; ++i)
+		std::cout << "*";
+	std::cout << std::endl;
+}

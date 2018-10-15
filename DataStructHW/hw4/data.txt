@@ -1,0 +1,2 @@
+soccer golf football baseball hockey
+played joined-in dominated won loss
