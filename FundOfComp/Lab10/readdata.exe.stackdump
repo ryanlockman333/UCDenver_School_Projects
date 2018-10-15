@@ -1,0 +1,7 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=66647361
+eax=00000000 ebx=0028AC4C ecx=80000038 edx=6C6FAACC esi=0000002E edi=00000064
+ebp=66647361 esp=0028AC30 program=C:\Users\j0hn\Desktop\Lab10\readdata.exe, pid 1204, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+End of stack trace
