@@ -1,0 +1,13 @@
+// gradeavg.cpp algorithm
+// Ryan Lockman: 101430670
+
+Algorithm:
+
+Create variables to store g1, g2, g3, and avg
+Prompt the user for grade1
+Prompt the user for grade2
+Prompt the user for grade3
+Calculate the avg with the given 3 values
+	-add the grades together then divide by the number of grades entered
+Output the avg to the screen
+Make sure output is correct
