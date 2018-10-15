@@ -1,0 +1,15 @@
+Algorithm for kilotomiles.cpp
+Ryan Lockman: 101430670
+
+-Sorry haven't downloaded word yet, hope a common txt file is fine.
+-Thanks
+
+Algorithm:
+
+Create a constant for KILO.
+One kilometre ='s 0.621 miles.
+Create our input, output, and mile variables for storing our data.
+Use cout and cin to input user data.
+Create our formula (KILO * miles) to complete our conversion.
+Re-use cout to output our answer.
+Check our values for correct output.
