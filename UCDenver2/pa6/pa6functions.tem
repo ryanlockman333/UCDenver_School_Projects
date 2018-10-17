@@ -1,0 +1,59 @@
+/********************************************************************************************************
+ * Ryan Lockman                                                                                         *
+ * pa6functions.tem                                                                                     *
+ * Description: pa6 function implementations.                                                           *
+ * 5/7/14                                                                                               *
+ ********************************************************************************************************/
+
+// Headers
+#include <iostream>
+#include <fstream>
+#include <limits>
+
+// Global Function Implementations
+template<typename set_T>
+int readFile(const char* const path, set_T &s1, set_T &s2, set_T &s3) {
+	std::ifstream inFile(path);
+	if(!inFile)
+		return -1;
+
+	float f = 0;   
+	
+	while(inFile.good())
+		if(inFile.peek() == '\n' || inFile.peek() == '\r')
+			while(inFile >> f) {
+				s2.insert(f);
+				if(inFile.peek() == '\n' || inFile.peek() == '\r')
+					while(inFile >> f)
+						s3.insert(f);
+			}
+		else {
+			inFile >> f;
+			s1.insert(f);
+		}
+
+	inFile.close();
+    return 0;
+}
+
+bool promptYN(const std::string reply) {
+	if	   (reply == "YES"		 || reply == "Yes"		 || reply == "yes"		 ||
+		    reply == "SURE"		 || reply == "Sure"		 || reply == "sure"		 ||
+		    reply == "OK"		 || reply == "Ok"		 || reply == "ok"		 ||
+		    reply == "Y"		 || reply == "y")
+		    return true;
+	else if(reply == "NO"        || reply == "No"		 || reply == "no"		 ||
+		    reply == "QUIT"      || reply == "Quit"		 || reply == "quit"		 ||
+			reply == "STOP"      || reply == "Stop"		 || reply == "stop"		 ||
+			reply == "TERMINATE" || reply == "Terminate" || reply == "terminate" ||
+			reply == "N"		 || reply == "n")
+			return false;
+	else
+			return true;
+}
+
+void flush_stream() {
+    std::cin.clear(); // reset flags
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard stream input
+}
+

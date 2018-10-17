@@ -1,0 +1,218 @@
+/********************************************************************************************* 
+ * Ryan Lockman                                                                              *
+ * forward_list.tem                                                                          *
+ * Description: Forward_List Class implementations.                                          *
+ * 3/28/14                                                                                   *
+ *********************************************************************************************/
+
+// Headers
+#include <iostream>
+#include <stdexcept>
+
+// Constructors
+template<typename T>
+template<typename Iterator>
+Forward_List<T>::Forward_List(Iterator b, Iterator e) : head(NULL), used(0) {
+    // Fill Reverse for Correct Order Later
+    Forward_List<value_type> reverse;
+    while(b != e)
+        reverse.push_front(*b++);
+
+    // Fill Actual List
+    while(!reverse.empty()) {
+        push_front(reverse.front());
+        reverse.pop_front();
+    }
+}
+
+// Operator Overloads
+template<typename T>
+void Forward_List<T>::operator=(const Forward_List &rhs) {
+    if(this != &rhs)
+        copy(rhs);
+}
+
+// Constant Member Functions
+template<typename T>
+const T& Forward_List<T>::front() const {
+    if(empty())
+        throw std::underflow_error("front(): Empty Forward_List");
+
+    return head->getData();
+}
+
+// Modification Member Functions
+template<typename T>
+void Forward_List<T>::push_front(const T &entry) {
+    head = new Node<T>(entry, head);
+    ++used;
+}
+
+template<typename T>
+void Forward_List<T>::pop_front() {
+    if(empty())
+        throw std::underflow_error("pop_front(): Empty Forward_List");
+
+    Node<T> *tmp = head;
+    head = head->getLink();
+    delete tmp;
+    --used;           
+}
+
+template<typename T>
+bool Forward_List<T>::erase_one(const T &target) {
+    // Check Empty
+    if(empty())
+        return false;
+
+    // Check Front
+	if(target == front()) {
+	    pop_front();
+        --used;
+	    return true;
+	}
+	
+    // Check Remaining
+    Node<T> *trailCurrent = head;
+	Node<T> *current = head->getLink();
+
+	while(current) { // while not null
+		if(current->getData() == target) {
+            Node<T> *remove = current;
+			trailCurrent->setLink(current->getLink());
+			delete remove;
+            --used;
+			return true;
+		}
+        else {
+		    current = current->getLink();
+            trailCurrent = trailCurrent->getLink();
+        }
+	}
+
+	return false;
+}
+
+template<typename T>
+unsigned Forward_List<T>::erase(const T &target) {
+    unsigned count = 0;
+
+    // Loop Erases
+    while(erase_one(target))
+        ++count;
+
+    return count;
+}
+
+template<typename T>
+void Forward_List<T>::clear() {
+    if(empty())
+        return;
+
+    // Loop Pop
+    while(head)
+        pop_front();
+
+    head = NULL;
+    used = 0;
+}
+
+template<typename T>
+typename Forward_List<T>::iterator Forward_List<T>::find(const T &target) {
+	for(iterator it = begin(); it != end(); ++it)
+		if(target == *it)
+			return it;
+	return end();
+}
+
+template<typename T>
+void Forward_List<T>::insert_after(iterator it, const T &entry) {
+    // Check Empty
+    if(empty()) {
+        head = new Node<T>(entry, head);
+        ++used;
+        return;
+    }
+
+    // Not Empty, Insert After if Found
+    Node<T> *current = head;
+	while(current) {
+		if(current->getData() == *it) {
+		    current->setLink(new Node<T>(entry, current->getLink()));
+            ++used;
+            return;
+        }
+        else
+	        current = current->getLink();
+	}
+}
+
+template<typename T>
+bool Forward_List<T>::remove_after(iterator it) {
+    // Check Empty
+    if(empty())
+        return false;
+
+    // Check Remaining
+	Node<T> *current = head;
+
+	while(current) {
+		if(current->getData() == *it) {
+            Node<T> *remove = current->getLink();
+			current->setLink(remove->getLink());
+			delete remove;
+            --used;
+			return true;
+		}
+        else
+		    current = current->getLink();
+	}
+
+	return false;
+}
+
+template<typename T>
+template<typename Iterator>
+void Forward_List<T>::insert_after(iterator it, Iterator b, Iterator e) {
+    while(b != e) {
+        insert_after(it, *b);
+        ++b;
+    }
+}
+
+template<typename T>
+void Forward_List<T>::remove_range(iterator b, iterator e) {
+    while(b != e) {
+        erase_one(*b++);
+    }
+}
+
+// Friends
+// Overloaded Operators
+template<typename T>
+std::ostream& operator<<(std::ostream& os, const Forward_List<T> &rhs) {
+    typename Forward_List<T>::const_iterator b = rhs.cbegin(), e = rhs.cend();
+    while(b != e)
+        os << *b++ << "\n";
+
+    return os;
+}
+
+// Helper Functions
+template<typename T>
+void Forward_List<T>::copy(const Forward_List &rhs) {
+    if(!empty())
+        clear();
+
+    // Fill Reverse for Correct Order
+    Forward_List<T> reverse;
+    for(const_iterator it = rhs.cbegin(); it != rhs.cend(); ++it)
+        reverse.push_front(*it);
+
+    // Fill Actual List
+    while(!reverse.empty()) {
+        push_front(reverse.front());
+        reverse.pop_front();
+    }
+}
+

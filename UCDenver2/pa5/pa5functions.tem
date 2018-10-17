@@ -1,0 +1,83 @@
+/********************************************************************************************* 
+ * Ryan Lockman                                                                              *
+ * pa5functions.cpp                                                                          *
+ * Description: pa5functions implementations.                                                *
+ * 4/16/14                                                                                   *
+ *********************************************************************************************/
+
+// Headers
+#include <limits>
+#include <iostream>
+#include "pa5functions.h"
+
+// Function Implementations
+bool promptYN(const std::string reply) {
+	if	   (reply == "YES"		 || reply == "Yes"		 || reply == "yes"		 ||
+		    reply == "SURE"		 || reply == "Sure"		 || reply == "sure"		 ||
+		    reply == "OK"		 || reply == "Ok"		 || reply == "ok"		 ||
+		    reply == "Y"		 || reply == "y")
+		    return true;
+	else if(reply == "NO"        || reply == "No"		 || reply == "no"		 ||
+		    reply == "QUIT"      || reply == "Quit"		 || reply == "quit"		 ||
+			reply == "STOP"      || reply == "Stop"		 || reply == "stop"		 ||
+			reply == "TERMINATE" || reply == "Terminate" || reply == "terminate" ||
+			reply == "N"		 || reply == "n")
+			return false;
+	else
+			return true;
+}
+
+void flush_stream() {
+    std::cin.clear(); // reset flags
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard stream input
+}
+
+template<class Frequencey>
+void fillMatrix(Frequencey fq) {
+    // Declarations
+    typename       Frequencey::iterator b = fq.begin(), e = fq.end();
+    const typename Frequencey::size_type SIZE = fq.size();
+    typename       Frequencey::key_type letterKey[SIZE];   
+    std::size_t    max = 0;
+
+    // Get Max Value
+    for(; b != e; ++b)
+        if(b->second > max)
+            max = b->second;
+
+    // Initialize Matrix With ROWMAX and COLMAX
+    const std::size_t ROWMAX = max, COLMAX = 26;
+    Matrix myMatrix(ROWMAX, std::vector<char>(COLMAX, ' '));
+
+    // Loop From Map to Matrix
+    for(std::size_t i = 0; !fq.empty(); ++i) {
+        // Get Next Max
+        for(max = 0, b = fq.begin(); b != e; ++b)
+            if(b->second > max) {
+                max = b->second;
+                letterKey[i] = b->first;
+            }
+
+        // Erase Max From Map
+        fq.erase_occur(letterKey[i]);
+
+        // Insert * As Frequencey Into Matrix From Bottom Up
+        for(Matrix::size_type j = ROWMAX; j > (ROWMAX-max); myMatrix[--j][i] = '*');
+    }
+
+    // Print Matrix with Letters Below
+    std::cout << std::endl;
+    printMatrix(myMatrix, std::cout);
+    for(unsigned i = 0; i < SIZE; std::cout << std::left << letterKey[i++] << ' ');
+}
+
+template<typename OutStream>
+void printMatrix(const Matrix &myMatrix, OutStream &os) {
+    for(Matrix::size_type i = 0; i < myMatrix.size(); ++i) {
+        for(Matrix::size_type j = 0; j < myMatrix[i].size(); ++j)
+            os << std::left << myMatrix[i][j] << ' ';
+
+        os << std::left << std::endl;
+    }
+}
+

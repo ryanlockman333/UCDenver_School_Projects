@@ -1,0 +1,81 @@
+/* 
+ * Ryan Lockman
+ * ./pa2functions.tem
+ * Description: pa2 function implementations
+ *
+*/ 
+
+// Headers
+#include <cstdlib>
+#include <iostream>
+#include <fstream>
+#include <cassert>
+
+template<class DijksGraph, class FloydGraph>
+int fillBothGraphs(DijksGraph &G1, FloydGraph &G2, const char *path) {
+    // Open File
+    std::ifstream inFile(path);
+	if(!inFile)
+       return -1;
+
+    // Fill Matricies
+    std::string u, v, w;
+    while(inFile.good() && inFile.peek() != EOF) {
+        std::getline(inFile, u, ' ');
+        std::getline(inFile, v, ' ');
+        std::getline(inFile, w, '\n');
+        
+        // Insert Into DijksGraph
+        G1[ atoi(u.c_str()) ].push_back(std::make_pair(atoi(v.c_str()), atof(w.c_str())));
+
+        // Insert Into FloydGraph
+        G2[ atoi(u.c_str()) ][ atoi(v.c_str()) ] = atof(w.c_str());
+    }
+
+    // Close File
+    inFile.close();
+    return 0;
+}
+
+template<typename T>
+void calcMoney(const T busFare, const float productCosts, const float gratuity, const float currentMoney) {
+    // Check Parameters
+    assert(busFare >= 0 && productCosts >= 0 && gratuity >= 0 && currentMoney >= 0);
+
+    // Declare Food
+    T lasagna = 14.25, spaghetti = 13.95, gnocchi = 13.49;
+
+    // Calculate Money Costs
+    lasagna   += lasagna   * gratuity + busFare + productCosts;
+    spaghetti += spaghetti * gratuity + busFare + productCosts;
+    gnocchi   += gnocchi   * gratuity + busFare + productCosts;
+
+    // Check Totals
+    if(lasagna < currentMoney)
+        std::cout << "\nYou can afford: Lasagna";
+    else
+        if(spaghetti < currentMoney)
+            std::cout << "\nYou can afford: Spaghetti";
+        else
+            if(gnocchi < currentMoney)
+                std::cout << "\nYou can afford: Gnocchi";
+            else
+                std::cout << "\nYou can't afford a meal, sorry.\n";
+}
+
+bool promptYN(const std::string reply) {
+	if	   (reply == "YES"		 || reply == "Yes"		 || reply == "yes"		 ||
+		    reply == "SURE"		 || reply == "Sure"		 || reply == "sure"		 ||
+		    reply == "OK"		 || reply == "Ok"		 || reply == "ok"		 ||
+		    reply == "Y"		 || reply == "y")
+		    return true;
+	else if(reply == "NO"        || reply == "No"		 || reply == "no"		 ||
+		    reply == "QUIT"      || reply == "Quit"		 || reply == "quit"		 ||
+			reply == "STOP"      || reply == "Stop"		 || reply == "stop"		 ||
+			reply == "TERMINATE" || reply == "Terminate" || reply == "terminate" ||
+			reply == "N"		 || reply == "n")
+			return false;
+	else
+			return false;
+}
+

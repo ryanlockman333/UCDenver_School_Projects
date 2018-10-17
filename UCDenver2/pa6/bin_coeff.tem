@@ -1,0 +1,49 @@
+/********************************************************************************************************
+ * Ryan Lockman                                                                                         *
+ * bin_coeff.tem                                                                                        *
+ * Description: bin_coeff class implementations.                                                        *
+ * 5/7/14                                                                                               *
+ ********************************************************************************************************/
+
+// Headers
+#include <algorithm>
+
+// Modification Members
+template<typename... Ts>
+void Bin_Coeff<Ts...>::pascal(unsigned long n) {
+    for(unsigned long i = 0; i <= n; bin.push_back(binomial(n, i++)));
+}
+
+/*template<typename... Ts> template<std::size_t ...S, typename T> // unpack Tuple into function
+void Bin_Coeff<Ts...>::apply_elems(Tuple &&tuple) {
+    my_function(std::get<S>(Tuple)...);
+}*/
+
+// Constant Members
+template <typename... Ts>
+void Bin_Coeff<Ts...>::print() const {
+    std::cout << "The " << bin.size() << "-tuple that represents the coefficients is: (";
+
+    std::for_each(std::begin(bin), std::end(bin), [this](decltype(*std::begin(bin)) i) { // lambda range
+        static Vec::size_type c = 0;
+        if(++c == bin.size())
+            std::cout << i << ")\n\n";           
+        else
+            std::cout << i << ", ";
+    });   
+}
+
+// Helper Members
+template<typename... Ts>
+inline unsigned long Bin_Coeff<Ts...>::fact(unsigned long n) { // recursive
+    if(n == 0)
+        return 1;
+    else 
+        return n * fact(n - 1);
+}
+
+template<typename... Ts>
+inline unsigned long Bin_Coeff<Ts...>::binomial(unsigned long n, unsigned long k) {
+    return fact(n) / (fact(k) * fact(n - k));
+}
+

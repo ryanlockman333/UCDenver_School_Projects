@@ -1,0 +1,138 @@
+/* 
+ * Ryan Lockman
+ * pa3functions.tem
+ * Description: PA3 function implementations
+ * 3/17/14
+ *
+*/ 
+
+// Headers
+#include <cstdlib>
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <vector>
+#include "table.h"
+#include "record.h"
+
+bool promptYN(const std::string reply) {
+	if	   (reply == "YES"		 || reply == "Yes"		 || reply == "yes"		 ||
+		    reply == "SURE"		 || reply == "Sure"		 || reply == "sure"		 ||
+		    reply == "OK"		 || reply == "Ok"		 || reply == "ok"		 ||
+		    reply == "Y"		 || reply == "y")
+		    return true;
+	else if(reply == "NO"        || reply == "No"		 || reply == "no"		 ||
+		    reply == "QUIT"      || reply == "Quit"		 || reply == "quit"		 ||
+			reply == "STOP"      || reply == "Stop"		 || reply == "stop"		 ||
+			reply == "TERMINATE" || reply == "Terminate" || reply == "terminate" ||
+			reply == "N"		 || reply == "n")
+			return false;
+	else
+			return false;
+}
+
+float computeDues(const float hours) {
+    // Constants and Declarations
+    const float RATE1 = 10.17, RATE2 = 8.15, RATE3 = 6.13, RATE4 = 4.11, RATE5 = 2.09;
+
+    float total = 0;
+
+    // Compute
+    if(hours >= 0 && hours < 2)
+        total = RATE1 * hours;
+    else if(hours >= 2 && hours < 4)
+        total = RATE2 * hours;
+    else if(hours >= 4 && hours < 6)
+        total = RATE3 * hours;
+    else if(hours >= 6 && hours < 8)
+        total = RATE4 * hours;
+    else if(hours >= 8)
+        total = RATE5 * hours;
+
+    return total;
+}
+
+template<class HashTable>
+int fillTable(HashTable &table, const char *path) {
+    // File to Read
+    std::ifstream inFile(path);
+    if(!inFile) {
+        std::cout << "\nError, opening file for reading\n";
+        return -1;
+    }
+
+    // Declarations
+    std::string str;
+    Record r;
+    
+    // Fill File
+    while(inFile.good() && inFile.peek() != EOF) {
+        // Read In Name
+        std::getline(inFile, str, ' ');
+        r.setName(str);
+
+        // Read In Month Data
+        int count = 0;
+        while(count++ < 11) {
+            std::getline(inFile, str, ' ');
+            r.getMonthHours().push_back(atof(str.c_str()));
+            r.getMonthDues().push_back( computeDues( atof( str.c_str()))); // Calced Hours
+        }
+
+        // Get Last Month Data Value on Line
+        std::getline(inFile, str, '\n');
+        r.getMonthHours().push_back(atof(str.c_str()));
+        r.getMonthDues().push_back( computeDues( atof( str.c_str()))); // Calced Hours
+
+        // Push Data in Table, Check Error
+        try {
+    	    table.push(r, r.getName());
+        }
+        catch(typename Table<Record>::HashException he) {
+            std::cout << "\nException was caught: " << he.what() << "\n";
+            return -1;
+        }
+
+        // Reset Record
+        r = Record();
+    }
+    inFile.close();
+
+    return 0;
+}
+
+template<class HashTable>
+void printTableStats(const HashTable &table) {
+    // Typedefs, Constants, Declarations
+    typedef std::vector<Record::value_type> Vector;
+    typedef Vector::const_iterator c_i;
+    typedef typename HashTable::size_type hs_t;
+
+    const unsigned M = 12;
+
+    const std::string months[M] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+
+    std::cout << std::showpoint << std::fixed << std::setprecision(2);
+
+    // Loop Through Table
+    if(!table.is_empty())
+        for(hs_t i = 0; i < table.CAPACITY; ++i)
+            if(!table.is_vacant(i)) {
+                c_i b = table.data_at_index(i).getMonthDues().begin(), 
+                    e = table.data_at_index(i).getMonthDues().end();
+
+                // Output Name
+                std::cout << std::endl << table.data_at_index(i).getName() << std::endl;
+
+                // Output Months
+                for(unsigned j = 0; j < M; std::cout << "  " + months[j++] + "  ");
+
+                std::cout << std::endl;
+            
+                // Output Month Data
+                for(; b != e; std::cout << " $" << *b++);
+
+                std::cout << std::endl;           
+            }
+}
+
