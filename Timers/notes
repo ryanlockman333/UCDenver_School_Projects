@@ -1,0 +1,7 @@
+std::timer_t needs (long) for printf and std::cout
+std::uint64_t needs (long long unsigned) for printf and std::cout(especially times)
+timespec.tv_sec needs (long)for printf and std::cout
+ID(e.g pid_t) needs (long) for printf and std::cout
+sometimes ssize_t needs (long) and for floating point (int)
+pthread_t needs (long) its a ID
+rlimit
