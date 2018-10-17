@@ -1,0 +1,24 @@
+void
+handler(int sig)
+{
+/* Perform cleanup steps */
+signal(sig, SIG_DFL);
+raise(sig);
+/* Disestablish handler */
+/* Raise signal again */
+}
+
+siginfo_t info;
+...
+memset(&info, 0, sizeof(siginfo_t));
+if (waitid(idtype, id, &info, options | WNOHANG) == -1)
+errExit("waitid");
+if (info.si_pid == 0) {
+/* No children changed state */
+} else {
+/* A child changed state; details are provided in 'info' */
+}
+
+
+r10
+4. It's almost all out on Federal between Evans and 70. Sometimes the Zuni-Speer area..

@@ -1,0 +1,3 @@
+f any steps performed during exit processing access variables
+local to main(), then doing a return from main() results in undefined behavior.
+
