@@ -1,0 +1,96 @@
+-usss
+-Dereck Booth
+-The US Secret Service
+-Mission is to safegaurd the nations financial infrastructure and payment systems to preserve the itegrity of the economy, an to protect national leaders,
+ visiting heads of state, and gov. designated sites, and national security events.
+
+-he protected Bushe's daughters and bush for 4 years
+-went to brunswick georgia, 6 months comp forensics. Called FLETSY, teach you your training, gun shooting, rules..........
+-assigned to mitt romney for 6 months
+-assigned to president of indonesia for a few months
+__________________________________________
+-april 14th 1865 is when secret service started because booth assasinated president lincoln.
+-1/3 of money was counterfit in 1865 because of Confederate so they needed to start secret agency.
+-effective july 5th 1865
+-1901 another assasination
+-rosevelt never needed protection, had a gun, would brag.
+-Secret service likes to brag that they started the FBI.
+_______________________________________
+-counterfit is their bread and butter
+    -started with it
+-financial crimes
+-evolved to computer crimes
+-patiraot act
+_______________________________________
+-they protect president, vice president, immediate family, former presidents, and cabinet level officials
+-former presidents and ladies get protection forever.
+-also protect foreign dignitaries
+  -foregin heads of state visitors
+_______________________________________
+-credit card access diviece(skimmers), atm skimmers, hack into point of cell terminals
+-critical systems protection
+   -alot of threats for network while major person(ie president) is visiting say pepsi center
+   -beef up firewalls, security, avoid hackers
+-cybercrime
+  -malaware
+     -hides in web traffic
+     - difficault to detect for antivirus
+  -keyloggers
+_______________________________________
+*emerging Techniques*
+ -Access Device Fraud
+   -carding forms
+
+ -phishing
+
+ -QR Codes
+
+_______________________________________
+
+- History of Electronic Crimes Special Agent Program(ECSAP)
+  -began in 1987 with 12 agencies, ans initially all members of the program were trained in compuet forensics,
+   and now their are three different levels of training.
+  -today over 1600 trained agents in USSS field offices worldwide.
+  -aprox. 180 new agents are trained and equipped annually.
+
+-Agent Boothe's role in counterfitting is finding images on computers, harddrives...
+-he said its very hard finding them.
+-just had a bust with cab driver getting counterfit form 2 guys in NY flying to CA, had 23000 real and 600 counterfit.
+
+_____________________________
+NITRO course for network intusion
+-ECSAP-CF Course is the backbone of secret service focuses on forensic examination of digital storage devides.
+
+-advaced class
+ - linux forensics/ mac
+ - cell phone forensics
+ - point of sales systems
+
+_______________________
+
+- Mission Statement
+ - the us secret service crimes task force are a strategic alliacne of law enforcement, academie, and private sector.
+
+___________________________
+1029 law is access device
+1030 law is financial crimes
+  -high dolar
+  -organized groups/multi defendant
+  -transnational investigations
+
+___________________________
+
+
+They have academia partnerships with
+ - CERT, coordiance center in phily
+ - cell phone forensics facility at university of tulsa
+ - national comp fornsics instituiton(NCFI)
+ - BICEP Training for internation law enforcement oversees.
+
+____________________________
+#1 prioity is protection in key people(president...)
+#2 is crimes
+
+
+greatest reward for booth is helping cops
+
