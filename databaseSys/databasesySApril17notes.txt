@@ -1,0 +1,50 @@
+--stonebreakers model will be on final
+     S                  C            
+  |--------------------------|
+  | Rlational |    object    |
+Q |           |   redundent  |
+  |--------------------------|
+  |   Xrs     |   Object     |
+Q |           |   Oriented   |
+  |--------------------------|
+
+
+-Gods of OODMBS
+1. Maintain real world objects
+   -high integrity
+   -easy to identify and operate Ptrs.
+2. Handle arbitrary complexity programming features.
+
+FEATURES
+ -create persistent objects
+ -user defined programs for use by man objects.
+ -ndexing
+ -concurrencey control/integrity constraints
+ -recovery mechanisms
+ -instance variables
+ -automatic generation of Ptrs(Object IDs)
+
+MESSAGE PASSING
+m1 --->(O2)--f(_)
+Scripts
+
+      +                           -
+_________________________|_______________
+                         |
+systematic               |   inability to respond to relationships well
+reuse of code            |
+easy develop new objects |
+                         |
+
+i.  OD itself, assigned by DBMS
+c. constructor
+v. value assigned with a particular OID/constructor pair
+
+CONSTRUCTORS
+-atom  = attribute = col
+-tuple = Record    = row
+-set   = entity    = Table
+-array
+-list
+
+Domains = data types

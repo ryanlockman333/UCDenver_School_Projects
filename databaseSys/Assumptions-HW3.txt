@@ -1,0 +1,62 @@
+Ryan Lockman: 101430670
+Database System Concepts
+Homework #3
+
+Assumptions:
+
+1:  a TEACHER PROVIDES 1 INSTRUMENT 0 to N times to 1 STUDENT 0 to N times
+2:  a TEACHER PROVIDES 1 RENT_FORM 0 to N times to 1 STUDENT 0 to N times
+3:  a TEACHER PROVIDES N INSTRUMENTS 0 to N times to 1 REPAIR_SHOP 0 to N times
+4:  a TEACHER PROVIDES N WORK_ORDER_FORMS 0 to N times to 1 REPAIR_SHOP 0 to N times
+5:  a TEACHER FILES N REPAIR_LOG 0 to N times
+6:  a TEACHER FILES N INSPECT_LOG 0 to N times 
+7:  a TEACHER FILES N INVOICES 0 to N times 
+8:  a TEACHER FILES N RENT_LOG 0 to N times
+9:  a TEACHER is a PART_OF 1 SCHOOL and can be in 1 to 1 SCHOOLS at a time
+10: a STUDENT is PROVIDED 1 INSTRUMENT 0 to N times by 1 TEACHER 0 to N times
+11: a STUDENT is PROVIDED 1 RENT_FORM 0 to N times by 1 TEACHER 0 to N times
+12: a STUDENT SIGNS N RENT_FORMS 0 to 1 times
+13: a STUDENT has N DEPENDANTS and can only have 1 to 2 of them
+14: a STUDENT is a PART_OF 1 SCHOOL and can be in 1 to 1 SCHOOLS at a time
+15: a DEPENDANT has N STUDENTS and can have 1 to N of them
+16: a DEPENDANT SIGNS N RENT_FORMS 0 to 1 times
+17: a RENT_FORM is SIGNED by N DEPENDANTS 0 to 1 times
+18: a RENT_FORM is SIGNED by 1 STUDENT 0 to 1 times
+19: a RENT_FORM is PROVIDED by 1 TEACHER 0 to N times
+20: a RENT_FORM is PROVIDED to 1 STUDENT 0 to N times
+21: a INSTRUMENT is PROVIDED by 1 TEACHER 0 to N times
+22: a INSTRUMENT is PROVIDED to 1 STUDENT 0 to N times
+23: a INSTRUMENT is PROVIDED to 1 REPAIR_SHOP 0 to N times   
+24: a INSTRUMENT RESIDES in 1 INVENTORY with 0 to N of them
+25: an INVENTORY helps RESIDE N INSTRUMENTS with 0 to N of them 
+26: a WORK_ORDER_FORM is PROVIDED by 1 TEACHER 0 to N times
+27: a WORK_ORDER_FORM is PROVIDED to 1 REPAIR_SHOP 0 to N times
+28: a REPAIR_SHOP is PROVIDED N INSTRUMENTS 0 to N times by 1 TEACHER 0 to N times
+29: a REPAIR_SHOP IS PROVIDED N WORK_ORDER_FORMS 0 to N times by 1 teacher 0 to N times
+30: a REPAIR_SHOP EMPLOYS 1 SHOP_CONTACT 0 to N times
+31: a SHOP_CONTACT is EMPLOYED by 1 REPAIR_SHOP 0 to N times
+32: a REPAIR_LOG is FILED by 1 TEACHER at a time 0 to N times
+33. a INSPECT_LOG is FILED by 1 TEACHER at a time 0 to N times
+34: a RENT_LOG is FILED by 1 TEACHER at a time 0 to N times 
+35: a INVOICE is FILED by 1 TEACHER 0 to N times
+36: a SCHOOL has N STUDENTS that can be PART_OF 1 to 1 SCHOOLS at a time
+37: a SCHOOL has N TEACHERS that can be a PART_OF 1 to 1 SCHOOLS at a time
+38: its mandatory for a DEPENDANT and STUDENT to SIGN a RENT_FORM
+39: a DEPENDANT is mandatory for a STUDENT
+40: a DEPENDANT can only exist if their is a STUDENT
+41: its mandatory for an INSTRUMENT to RESIDE in INVENTORY
+42: its mandatory for a SHOP_CONTACT to be RELATED to a REPAIR_SHOP
+43: a SHOP_CONTACT can only exist if there is a REPAIR_SHOP
+44: its mandatory for a STUDENT to be a PART_OF a SCHOOL
+45: COMMENTS are multivalued attributes
+46: INVENTORY can not exist without INSTRUMENTS
+47: REPAIR_LOG has Shop_IDs, Repair_Costs, Repair_Dates, and Repair_Reasons that are multivalued
+    attributes for each time a REPAIR_LOG is updated
+48: RENT_LOG has School_IDs and Teach_IDs which are multivalued for each time a REPAIR_LOG is updated
+49: INSPECT_LOG has Inspect_Dates and Inspectors which are multivalued for each time an INSPECT_LOG is updated
+50: its mandatory for a TEACHER to be a PART_OF a SCHOOL
+51: a TEACHER can loan an INSTRUMENT to another SCHOOL TEACHER
+52: its mandatory to FILE an INVOICE if an INSTRUMENT is rented
+53: an INVOICE can't exist without an INSTRUMENT being PROVIDED
+54: Services in REPAIR_SHOP is a multivalued attribute to list all Services provided
+

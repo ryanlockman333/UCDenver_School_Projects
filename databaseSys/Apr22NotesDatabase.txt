@@ -1,0 +1,40 @@
+The Dirstributed Database
+ -Different physical locations
+ -belong logically to one system
+ What constitutes the whole system?
+    -Planned Redundencey
+
+      -
+systme design - complex, hard to document
+system implementation/maintanance - coordianate ready, execute on a schedual
+system interations with people
+
+      +
+applications that are naturally distributed
+increased availability/reliablity
+local control for sharing
+ -client/server architecture
+improved performance
+ -seperated data into managable bits
+
+Functions of DBMS
+    -access to remote
+    -transmit between sites
+    -track data distribuion
+    -track replication
+    -execution of data structures at multiple sites
+    -delete which copy to access
+    -maintain integrity among replicas
+    -recover form disasters(site or network failures)
+
+To specify a horizontal fragment - a subset of rows of entity
+    f1 <--- 0``<bool> (R(|><|<bool> S))
+
+to specify verticle fragment - a subset of columns
+    f2 <--- PieSymbol<columns, col> (R)
+
+mixed Fragment - some of the rows some of the cols
+    f3 <--- PieSymbol<col1,col2,...>(O``<bool>(TABLE))
+
+Fragmentation Schema - all parts that constitute the database
+DBNAME <--- {f1 |><|<bool> f2 |><|<bool> f3 |><|......fx}

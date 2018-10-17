@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="drawing.pdf">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="46.968188 : 641.66756 : 1"
+       inkscape:vp_y="0 : 1209.3571 : 0"
+       inkscape:vp_z="4502.8706 : 641.66756 : 1"
+       inkscape:persp3d-origin="2274.9194 : 429.55395 : 1"
+       id="perspective3142" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.28"
+     inkscape:cx="590.84209"
+     inkscape:cy="454.60048"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="993"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#e6e6e6;fill-rule:evenodd;stroke:#000000;stroke-width:1.07592189px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect3023"
+       width="723.00458"
+       height="251.21861"
+       x="13.691797"
+       y="798.09686" />
+    <text
+       xml:space="preserve"
+       style="font-size:15px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+       x="252.98544"
+       y="810.72705"
+       id="text3029"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="252.98544"
+         y="810.72705"
+         id="tspan3033">Internal Schema(physical)</tspan></text>
+    <rect
+       style="fill:#e6e6e6"
+       id="rect3037"
+       width="725.28955"
+       height="494.04422"
+       x="10.101525"
+       y="299.20679" />
+    <text
+       xml:space="preserve"
+       style="font-size:17.63478088px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+       x="293.79904"
+       y="305.69128"
+       id="text3039"
+       sodipodi:linespacing="120%"
+       transform="scale(0.97261155,1.0281597)"><tspan
+         sodipodi:role="line"
+         id="tspan3041"
+         x="293.79904"
+         y="305.69128">Conceptual Schema</tspan></text>
+    <rect
+       style="fill:#e6e6e6"
+       id="rect3043"
+       width="725.38409"
+       height="242.43661"
+       x="10.101526"
+       y="44.229942" />
+    <text
+       xml:space="preserve"
+       style="font-size:17.01979446px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+       x="249.2226"
+       y="61.718853"
+       id="text3045"
+       sodipodi:linespacing="120%"
+       transform="scale(1.0501019,0.95228853)"><tspan
+         sodipodi:role="line"
+         id="tspan3047"
+         x="249.2226"
+         y="61.718853">External Schema(views)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:19.29468536px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="188.16621"
+       y="17.811235"
+       id="text3049"
+       sodipodi:linespacing="120%"
+       transform="scale(1.2098616,0.82654083)"><tspan
+         sodipodi:role="line"
+         id="tspan3051"
+         x="188.16621"
+         y="17.811235">Ryan Lockman: 101430670</tspan><tspan
+         sodipodi:role="line"
+         x="188.16621"
+         y="40.964859"
+         id="tspan3053">   Homework 2: 3-Schema</tspan></text>
+    <rect
+       style="fill:#f9f9f9"
+       id="rect3055"
+       width="515.69342"
+       height="38.38578"
+       x="15.152288"
+       y="345.25537" />
+    <text
+       xml:space="preserve"
+       style="font-size:20.85679436px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="10.691516"
+       y="445.03546"
+       id="text3057"
+       sodipodi:linespacing="120%"
+       transform="scale(1.3068328,0.76520885)"><tspan
+         sodipodi:role="line"
+         id="tspan3059"
+         x="10.691516"
+         y="445.03546">STUDENT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:23.83525658px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="16.370285"
+       y="339.63989"
+       id="text3061"
+       sodipodi:linespacing="120%"
+       transform="scale(0.91171262,1.0968368)"><tspan
+         sodipodi:role="line"
+         id="tspan3063"
+         x="16.370285"
+         y="339.63989">NAME | ADDRESS | PHONE | EMAIL | AGE | S_ID</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.48425674px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="11.397273"
+       y="525.80164"
+       id="text3110"
+       sodipodi:linespacing="120%"
+       transform="scale(1.2911397,0.77450956)"><tspan
+         sodipodi:role="line"
+         id="tspan3112"
+         x="11.397273"
+         y="525.80164">INSTRUCTOR</tspan></text>
+    <rect
+       style="fill:#f9f9f9"
+       id="rect3114"
+       width="499.39081"
+       height="33.335033"
+       x="14.142136"
+       y="414.95593" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.11560667px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 81.440808,478.59554 c 0,32.32488 -1.25721,32.32488 -1.25721,32.32488"
+       id="path3067-1"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.11560667px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 84.471265,477.58539 c 0,32.32488 -1.25721,32.32488 -1.25721,32.32488"
+       id="path3067-9"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.11560667px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 82.450962,476.57524 c 0,32.32488 -1.25721,32.32488 -1.25721,32.32488"
+       id="path3067-92"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:24.31540489px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="16.729866"
+       y="392.47443"
+       id="text3174"
+       sodipodi:linespacing="120%"
+       transform="scale(0.89231582,1.1206795)"><tspan
+         sodipodi:role="line"
+         id="tspan3176"
+         x="16.729866"
+         y="392.47443">NAME | ADDRESS | PHONE | EMAIL | INSTR_ID</tspan></text>
+    <rect
+       style="fill:#f9f9f9"
+       id="rect3055-9"
+       width="387.91959"
+       height="38.38578"
+       x="14.647215"
+       y="475.56509" />
+    <text
+       xml:space="preserve"
+       style="font-size:19.43863487px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="13.324048"
+       y="572.25873"
+       id="text3196"
+       sodipodi:linespacing="120%"
+       transform="scale(1.2179746,0.82103519)"><tspan
+         sodipodi:role="line"
+         id="tspan3198"
+         x="13.324048"
+         y="572.25873">SCHOOL</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:25.38203239px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="21.36376"
+       y="404.51495"
+       id="text3200"
+       sodipodi:linespacing="120%"
+       transform="scale(0.79975586,1.2503816)"><tspan
+         sodipodi:role="line"
+         id="tspan3202"
+         x="21.36376"
+         y="404.51495">NAME | ADDRESS | SCH_ID | INSTR_ID</tspan></text>
+    <rect
+       style="fill:#f9f9f9"
+       id="rect3055-2"
+       width="312.5766"
+       height="38.38578"
+       x="17.677658"
+       y="611.93567" />
+    <rect
+       style="fill:#f9f9f9"
+       id="rect3055-8"
+       width="420.72943"
+       height="38.38578"
+       x="17.677656"
+       y="544.25543" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3218"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:120%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion3220"><rect
+           id="rect3222"
+           width="45.456863"
+           height="83.842659"
+           x="-341.43155"
+           y="101.80864" /></flowRegion><flowPara
+         id="flowPara3224" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:18.07935905px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="18.860872"
+       y="608.91119"
+       id="text3226"
+       sodipodi:linespacing="120%"
+       transform="scale(1.1328058,0.88276382)"><tspan
+         sodipodi:role="line"
+         id="tspan3228"
+         x="18.860872"
+         y="608.91119">ATTN_RECORD</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24.53492355px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="21.885904"
+       y="472.09717"
+       id="text3230"
+       sodipodi:linespacing="120%"
+       transform="scale(0.82688431,1.209359)"><tspan
+         sodipodi:role="line"
+         id="tspan3232"
+         x="21.885904"
+         y="472.09717">HOUR_% | TOTAL_HOURS | SCH_ID | S_ID</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.43136978px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="17.359552"
+       y="675.06238"
+       id="text3234"
+       sodipodi:linespacing="120%"
+       transform="scale(1.1139947,0.89767038)"><tspan
+         sodipodi:role="line"
+         id="tspan3236"
+         x="17.359552"
+         y="675.06238">QUICK_RESPONSE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:25.40894318px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="24.060848"
+       y="588.24213"
+       id="text3238"
+       sodipodi:linespacing="120%"
+       transform="scale(0.92041926,1.0864614)"><tspan
+         sodipodi:role="line"
+         id="tspan3240"
+         x="24.060848"
+         y="588.24213">QR_CODE | DATE | SCH_ID</tspan></text>
+    <rect
+       style="fill:#f9f9f9"
+       id="rect3055-1"
+       width="152.97238"
+       height="38.38578"
+       x="18.247099"
+       y="741.69012" />
+    <rect
+       style="fill:#f9f9f9"
+       id="rect3055-84"
+       width="217.1828"
+       height="38.38578"
+       x="183.27011"
+       y="742.33014" />
+    <text
+       xml:space="preserve"
+       style="font-size:26.38113022px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="196.55882"
+       y="735.35883"
+       id="text3256"
+       sodipodi:linespacing="120%"
+       transform="scale(0.95563603,1.0464235)"><tspan
+         sodipodi:role="line"
+         id="tspan3258"
+         x="196.55882"
+         y="735.35883">FBOOK_ID | S_ID</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.42900848px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="188.72189"
+       y="728.36212"
+       id="text3260"
+       sodipodi:linespacing="120%"
+       transform="scale(0.98916165,1.0109571)"><tspan
+         sodipodi:role="line"
+         id="tspan3262"
+         x="188.72189"
+         y="728.36212">FACEBOOK_APP_ID</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.51913071px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="23.003084"
+       y="705.21118"
+       id="text3264"
+       sodipodi:linespacing="120%"
+       transform="scale(0.95679551,1.0451554)"><tspan
+         sodipodi:role="line"
+         id="tspan3266"
+         x="23.003084"
+         y="705.21118">REG_CODE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24.48052979px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="23.096775"
+       y="671.99847"
+       id="text3268"
+       sodipodi:linespacing="120%"
+       transform="scale(0.87493266,1.1429451)"><tspan
+         sodipodi:role="line"
+         id="tspan3270"
+         x="23.096775"
+         y="671.99847">CODE  |  S_ID</tspan></text>
+    <rect
+       style="fill:#f9f9f9"
+       id="rect3055-5"
+       width="325.3721"
+       height="38.38578"
+       x="19.697962"
+       y="675.57532" />
+    <text
+       xml:space="preserve"
+       style="font-size:19.79726219px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="16.986444"
+       y="882.88373"
+       id="text3279"
+       sodipodi:linespacing="120%"
+       transform="scale(1.3147256,0.76061501)"><tspan
+         sodipodi:role="line"
+         id="tspan3281"
+         x="16.986444"
+         y="882.88373">ADMIN</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:23.75272179px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="27.704033"
+       y="583.48505"
+       id="text3283"
+       sodipodi:linespacing="120%"
+       transform="scale(0.82939294,1.2057011)"><tspan
+         sodipodi:role="line"
+         id="tspan3285"
+         x="27.704033"
+         y="583.48505">USR_NAME | PASSWORD | EMAIL</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16.02272034px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="19.218454"
+       y="952.50543"
+       id="text3325"
+       sodipodi:linespacing="120%"
+       transform="scale(1.1558689,0.86515004)"><tspan
+         sodipodi:role="line"
+         x="19.218454"
+         y="952.50543"
+         id="tspan3329">SERVER:          &lt;KI_MARTIAL_SERVER&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="19.218454"
+         y="971.73273"
+         id="tspan3359">Company:       Ki Martial Arts Centers</tspan><tspan
+         sodipodi:role="line"
+         x="19.218454"
+         y="990.95996"
+         id="tspan3337">Service:          Oracle SQL</tspan><tspan
+         sodipodi:role="line"
+         x="19.218454"
+         y="1010.1873"
+         id="tspan3341">Paths:             http://www.kimartialart.com/</tspan><tspan
+         sodipodi:role="line"
+         x="19.218454"
+         y="1029.4146"
+         id="tspan3343">                       192.256.0.14/4444</tspan><tspan
+         sodipodi:role="line"
+         x="19.218454"
+         y="1048.6417"
+         id="tspan3172">Data Types:    STUDENT                     Type=struct(256)</tspan><tspan
+         sodipodi:role="line"
+         x="19.218454"
+         y="1067.869"
+         id="tspan3347">                       INSTRUCTOR               Type=struct(256)</tspan><tspan
+         sodipodi:role="line"
+         x="19.218454"
+         y="1087.0963"
+         id="tspan3349">                       SCHOOL                      Type=struct(256)</tspan><tspan
+         sodipodi:role="line"
+         x="19.218454"
+         y="1106.3235"
+         id="tspan3353">                       ATTN_RECORD            Type=struct(256)</tspan><tspan
+         sodipodi:role="line"
+         x="19.218454"
+         y="1125.5508"
+         id="tspan3351">                       FACBOOK_APP_ID        Type=struct(256)</tspan><tspan
+         sodipodi:role="line"
+         x="19.218454"
+         y="1144.7781"
+         id="tspan3357">                       QUICK_RESPONSE       Type=struct(256)</tspan><tspan
+         sodipodi:role="line"
+         x="19.218454"
+         y="1164.0054"
+         id="tspan3355">                       REG_CODE                  Type=struct(256)</tspan><tspan
+         sodipodi:role="line"
+         x="19.218454"
+         y="1183.2325"
+         id="tspan3345">                       ADMIN                         Type=struct(256)</tspan><tspan
+         sodipodi:role="line"
+         x="19.218454"
+         y="1202.4598"
+         id="tspan3339">                       S_ACCOUNT                 Type=struct(256)</tspan></text>
+    <rect
+       style="fill:#f9f9f9"
+       id="rect3361-7"
+       width="343.45187"
+       height="205.06097"
+       x="23.738598"
+       y="62.917759" />
+    <rect
+       style="fill:#f9f9f9"
+       id="rect3361-1"
+       width="325.2691"
+       height="207.40472"
+       x="392.44427"
+       y="63.604469" />
+    <text
+       xml:space="preserve"
+       style="font-size:19.94251442px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="139.45161"
+       y="72.359886"
+       id="text3425"
+       sodipodi:linespacing="120%"
+       transform="scale(0.91787818,1.0894692)"><tspan
+         sodipodi:role="line"
+         id="tspan3427"
+         x="139.45161"
+         y="72.359886">Web Browser</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:21.20852661px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="474.91714"
+       y="91.985924"
+       id="text3429"
+       sodipodi:linespacing="120%"
+       transform="scale(1.1094477,0.90134937)"><tspan
+         sodipodi:role="line"
+         id="tspan3431"
+         x="474.91714"
+         y="91.985924">Mobile</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 567.70572,273.53457 c -1.01015,37.37564 -3.03045,37.37564 -3.03045,37.37564 l -13.13199,-10.10152 15.15229,10.10152 14.14214,-9.09137 -14.14214,8.08122 z"
+       id="path3550"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 567.70573,275.55488 z"
+       id="path3552"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 553.56359,286.66656 15.15229,-12.12184 16.16244,14.14214 -16.16244,-17.17259 z"
+       id="path3554"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 109.60155,272.52442 c -1.01015,37.37564 -3.03045,37.37564 -3.03045,37.37564 l -13.131994,-10.10152 15.152294,10.10152 14.14214,-9.09137 -14.14214,8.08122 z"
+       id="path3550-4"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 107.58125,275.55488 z"
+       id="path3552-5"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 93.439106,286.66656 108.5914,274.54472 124.75384,288.68686 108.5914,271.51427 z"
+       id="path3554-9"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 128.0132,787.32405 c -1.01015,37.37564 -3.03045,37.37564 -3.03045,37.37564 l -13.13199,-10.10152 15.15229,10.10152 14.14214,-9.09137 -14.14214,8.08122 z"
+       id="path3550-7"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 126.77415,802.85451 z"
+       id="path3552-4"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 112.63201,799.12244 127.7843,787.0006 143.94674,801.14274 127.7843,783.97015 z"
+       id="path3554-0"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#e9ddaf"
+       id="rect3601"
+       width="260.61935"
+       height="54.548241"
+       x="31.314728"
+       y="206.8645" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.20221901px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="363.97342"
+       y="108.05553"
+       id="text3622"
+       sodipodi:linespacing="120%"
+       transform="scale(1.0935124,0.91448438)"><tspan
+         sodipodi:role="line"
+         id="tspan3624"
+         x="363.97342"
+         y="108.05553">-Windows Version : C#</tspan><tspan
+         sodipodi:role="line"
+         x="363.97342"
+         y="126.29819"
+         id="tspan3626">-Android   Version : Java</tspan><tspan
+         sodipodi:role="line"
+         x="363.97342"
+         y="144.54085"
+         id="tspan3628">-IPhone    Version : Obj-C  </tspan></text>
+    <rect
+       style="fill:#e9ddaf"
+       id="rect3638"
+       width="260.7139"
+       height="59.598999"
+       x="31.2202"
+       y="141.20459" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.16496754px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="101.55133"
+       y="152.84569"
+       id="text3640"
+       sodipodi:linespacing="120%"
+       transform="scale(0.9976561,1.0023494)"><tspan
+         sodipodi:role="line"
+         id="tspan3642"
+         x="101.55133"
+         y="152.84569">Instructor Veiw</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:15.60782814px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="78.437119"
+       y="270.61896"
+       id="text3644"
+       sodipodi:linespacing="120%"
+       transform="scale(1.2396874,0.80665495)"><tspan
+         sodipodi:role="line"
+         id="tspan3646"
+         x="78.437119"
+         y="270.61896">Admin Veiw</tspan></text>
+    <rect
+       style="fill:#e9ddaf"
+       id="rect3648"
+       width="248.49753"
+       height="59.599003"
+       x="400.02042"
+       y="205.85435" />
+    <text
+       xml:space="preserve"
+       style="font-size:17.43707466px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="400.05655"
+       y="252.76762"
+       id="text3654"
+       sodipodi:linespacing="120%"
+       transform="scale(1.1471311,0.87173996)"><tspan
+         sodipodi:role="line"
+         id="tspan3656"
+         x="400.05655"
+         y="252.76762">Student Veiw</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:15.85415745px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="361.01035"
+       y="283.32343"
+       id="text3106"
+       sodipodi:linespacing="120%"
+       transform="scale(1.1190506,0.89361465)"><tspan
+         sodipodi:role="line"
+         id="tspan3108"
+         x="361.01035"
+         y="283.32343">*KiMac App</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16.83493423px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="35.210487"
+       y="194.53168"
+       id="text3111"
+       sodipodi:linespacing="120%"
+       transform="scale(1.0296781,0.97117731)"><tspan
+         sodipodi:role="line"
+         id="tspan3113"
+         x="35.210487"
+         y="194.53168">*Excel</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="264.0625"
+       y="712.51843"
+       id="text3091"
+       sodipodi:linespacing="120%"><tspan
+         sodipodi:role="line"
+         id="tspan3093"
+         x="264.0625"
+         y="712.51843"> </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16.73107147px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="22.701723"
+       y="127.11132"
+       id="text3095"
+       sodipodi:linespacing="120%"
+       transform="scale(1.3785591,0.72539509)"><tspan
+         sodipodi:role="line"
+         id="tspan3097"
+         x="22.701723"
+         y="127.11132">: HTML</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.94655228px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="37.273682"
+       y="225.16588"
+       id="text3099"
+       sodipodi:linespacing="120%"
+       transform="scale(0.97361265,1.0271025)"><tspan
+         sodipodi:role="line"
+         id="tspan3101"
+         x="37.273682"
+         y="225.16588">+SQL</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.24912453px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="504.45795"
+       y="187.57248"
+       id="text3103"
+       sodipodi:linespacing="120%"
+       transform="scale(0.8004849,1.2492428)"><tspan
+         sodipodi:role="line"
+         id="tspan3105"
+         x="504.45795"
+         y="187.57248">+Query</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.24912453px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="45.995602"
+       y="133.89935"
+       id="text3103-3"
+       sodipodi:linespacing="120%"
+       transform="scale(0.8004849,1.2492428)"><tspan
+         sodipodi:role="line"
+         id="tspan3105-9"
+         x="45.995602"
+         y="133.89935">+Query</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16.12652969px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="27.906424"
+       y="120.50059"
+       id="text3100"
+       sodipodi:linespacing="120%"
+       transform="scale(1.0602713,0.94315483)"><tspan
+         sodipodi:role="line"
+         id="tspan3102"
+         x="27.906424"
+         y="120.50059">+IPC</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16.83493423px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="37.749519"
+       y="258.888"
+       id="text3111-3"
+       sodipodi:linespacing="120%"
+       transform="scale(1.0296781,0.97117731)"><tspan
+         sodipodi:role="line"
+         id="tspan3113-3"
+         x="37.749519"
+         y="258.888">*Excel</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:23.11482239px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="513.29089"
+       y="477.02658"
+       id="text3104"
+       sodipodi:linespacing="120%"
+       transform="scale(0.73599435,1.3587061)"><tspan
+         sodipodi:role="line"
+         id="tspan3106"
+         x="513.29089"
+         y="477.02658" /></text>
+    <rect
+       style="fill:#f9f9f9"
+       id="rect3055-2-9"
+       width="258.67035"
+       height="38.38578"
+       x="356.99295"
+       y="674.57556" />
+    <text
+       xml:space="preserve"
+       style="font-size:21.58908653px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="486.58221"
+       y="521.34473"
+       id="text3126"
+       sodipodi:linespacing="120%"
+       transform="scale(0.74285022,1.3461664)"><tspan
+         sodipodi:role="line"
+         id="tspan3128"
+         x="486.58221"
+         y="521.34473">USR_NAME | PASSWORD | S_ID</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.83976173px;font-style:normal;font-weight:normal;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="356.65121"
+       y="674.81232"
+       id="text3130"
+       sodipodi:linespacing="120%"
+       transform="scale(1.0116943,0.98844089)"><tspan
+         sodipodi:role="line"
+         id="tspan3132"
+         x="356.65121"
+         y="674.81232">S_ACCOUNT</tspan></text>
+  </g>
+</svg>

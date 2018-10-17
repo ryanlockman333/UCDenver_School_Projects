@@ -1,0 +1,59 @@
+// the sql statements above each php statement can be inserted into myphpadmin and work on the sql tab.
+
+#1.
+SELECT DISTINCT FEEDING.`Aml_ID#` AS `Animal ID` , ANIMALS.`Name` , FEEDING.`Allergy`
+FROM FEEDING
+JOIN ANIMALS ON FEEDING.`Aml_ID#` = ANIMALS.`Aml_ID#`
+GROUP BY ANIMALS.`Name`
+HAVING FEEDING.`Allergy` != 'none'
+LIMIT 0 , 50
+
+$sql = "SELECT DISTINCT FEEDING.`Aml_ID#` AS `Animal ID` , ANIMALS.`Name` , FEEDING.`Allergy`\n"
+    . "FROM FEEDING\n"
+    . "JOIN ANIMALS ON FEEDING.`Aml_ID#` = ANIMALS.`Aml_ID#`\n"
+    . "GROUP BY ANIMALS.`Name`\n"
+    . "HAVING FEEDING.`Allergy` != \'none\'\n"
+    . "LIMIT 0 , 50";
+
+
+2.
+SELECT DISTINCT ANIMALS.`Name` , ANIMALS.`Species` , FEEDING.`Food` , SUM( FEEDING.`Ate_Units` ) AS `Total Units Eaten`
+FROM ANIMALS
+JOIN FEEDING ON ANIMALS.`Aml_ID#` = FEEDING.`Aml_ID#`
+GROUP BY ANIMALS.`Name`
+LIMIT 0 , 50
+
+$sql = "SELECT DISTINCT ANIMALS.`Name` , ANIMALS.`Species` , FEEDING.`Food` , SUM( FEEDING.`Ate_Units` ) AS `Total Units Eaten`\n"
+    . "FROM ANIMALS\n"
+    . "JOIN FEEDING ON ANIMALS.`Aml_ID#` = FEEDING.`Aml_ID#`\n"
+    . "GROUP BY ANIMALS.`Name`\n"
+    . "LIMIT 0 , 50";
+
+3.
+SELECT ZOO_KEEPER.`F_Name` , ZOO_KEEPER.`L_Name` , ZOO.`Name` AS `Zoo Name` , ANIMALS.`Name` , ANIMALS.`Species`
+FROM ANIMALS
+JOIN ZOO_KEEPER ON ANIMALS.`ZK_ID#` = ZOO_KEEPER.`ZK_ID#`
+JOIN ZOO ON ZOO_KEEPER.`Zoo_ID#` = ZOO.`Zoo_ID#`
+LIMIT 0 , 50
+
+$sql = "SELECT ZOO_KEEPER.`F_Name` , ZOO_KEEPER.`L_Name` , ZOO.`Name` AS `Zoo Name` , ANIMALS.`Name` , ANIMALS.`Species`\n"
+    . "FROM ANIMALS\n"
+    . "JOIN ZOO_KEEPER ON ANIMALS.`ZK_ID#` = ZOO_KEEPER.`ZK_ID#`\n"
+    . "JOIN ZOO ON ZOO_KEEPER.`Zoo_ID#` = ZOO.`Zoo_ID#`\n"
+    . "LIMIT 0 , 50";
+
+4.
+SELECT ANIMALS.`Name` , ROUND( AVG( FEEDING.`Ate_Units` ) ) AS 'Average Units Eaten'
+FROM ANIMALS
+JOIN FEEDING ON ANIMALS.`Aml_ID#` = FEEDING.`Aml_ID#`
+HAVING ANIMALS.`Name` = 'bear'
+LIMIT 0 , 50
+
+$sql = "SELECT ANIMALS.`Name` , ROUND( AVG( FEEDING.`Ate_Units` ) ) AS \'Average Units Eaten\'\n"
+    . "FROM ANIMALS\n"
+    . "JOIN FEEDING ON ANIMALS.`Aml_ID#` = FEEDING.`Aml_ID#`\n"
+    . "HAVING ANIMALS.`Name` = \'bear\'\n"
+    . "LIMIT 0 , 50";
+
+5.
+No nite time eating animals.

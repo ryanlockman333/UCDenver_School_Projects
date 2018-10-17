@@ -1,0 +1,9 @@
+Hiarchical Model
+    same real world entities
+    organized in level
+    (R)s ownership + belonging
+
+Parent-Child Relationships
+    Records
+    Record-Types = table
+    PCR Type

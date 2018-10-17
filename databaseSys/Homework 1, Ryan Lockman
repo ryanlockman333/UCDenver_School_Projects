@@ -1,0 +1,49 @@
+Ryan Lockman
+101430670
+Homework 1
+CSCI 3287 Database System Concepts
+Instructor: Debra Parcheta
+
+
+PART 1
+
+1.   The purpose of this database would be providing scientific information on chemical structures and chemical data.
+
+2.   The users for the database would include teachers, scientists, students, and any person who's interested in chemistry.
+
+3.   The UoD would be chemistry data and information relating to it.
+
+4.   The database would definitely need multiple views because their are different types of end users. One view would be for
+   students and the general public, who would need a basic view. Also teachers might require a separate view for more data
+   access. Then their are even the people who work on, update, and maintain the data. They would need the most access.
+
+5.   I would say that this database could easily have casual users, naive users, sophisticated users, and standalone users.
+   Though, sophisticated and naive or parametric end users are probably the majority.
+
+6.   I would say it would be a complex query, object relational. This would be because of all the complex chemistry structures
+   and data that make up the database. Their is a lot of derived and calculated data and because its chemistry their would be
+   relations among data.
+
+PART 2
+
+1.   My UoD would be concerts.
+
+2.   The purpose of the database would be keeping track of multiple band's concerts and shows for users looking for information
+   on the subject manner.
+
+3.   The data being collected would range from the artists playing the shows, where they played, the date, the venue and city, and
+   even the song selection for that night(set list).
+
+4.   The data would be derived from the booking and playing of concerts.
+
+5.   An event would be updating a band's set list for the night being performed, adding recent dates, and also deleting a show if
+   the band canceled a date on their tour.
+
+6.   The output would be detailed information pertaining to concerts and the information would be valuable to anyone who is
+   interested or are attending one of the concerts.
+
+7.   You would most likely need a complex query, object relational. Because a lot of times two or more bands will play the same
+   venue on the same night. This would require relations between the two bands and the venues associated with that night. Also
+   end users would most likely need ad hoc to search for particular details on the band, set list, or venues for any given night.
+
+
