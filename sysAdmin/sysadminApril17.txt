@@ -1,0 +1,11 @@
+Asset
+
+Threat
+
+Vulnrability
+
+Risk
+
+CIA(confidentiality, integrity, availability) to make sure systems are protected.
+
+
