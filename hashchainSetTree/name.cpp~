@@ -1,0 +1,45 @@
+/*
+Ryan Lockman
+name.h
+Description: Name class definitions.
+*/
+
+// Headers
+#include <iostream>
+#include "name.h"
+
+// Stream Operators
+std::istream& operator>>(std::istream &is, Name &nameObj) {
+	Field fld;
+
+	std::cout << "\nPlease enter First name:     ";
+	is >> fld;
+	nameObj.setFirstName(fld);
+	std::cout << "Please enter Last name:      ";
+	is >> fld;
+	nameObj.setLastName(fld);
+
+	return is;
+}
+
+std::ifstream& operator>>(std::ifstream &ifs, Name &nameObj) {
+	Field fld;
+
+	ifs >> fld;
+	nameObj.setFirstName(fld);
+	ifs >> fld;
+	nameObj.setLastName(fld);
+
+	return ifs;
+}
+
+std::ostream& operator<<(std::ostream &os, const Name &nameObj) {
+	os << nameObj.getLastName() << ", " << nameObj.getFirstName() << "\n";
+	return os;
+}
+
+std::ofstream& operator<<(std::ofstream &ofs, const Name &nameObj) {
+	ofs << nameObj.getFirstName() << "," << nameObj.getLastName() << ",";
+	return ofs;
+}
+

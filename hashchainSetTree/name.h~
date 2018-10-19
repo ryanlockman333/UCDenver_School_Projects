@@ -1,0 +1,41 @@
+/*
+Ryan Lockman
+name.h
+Description: Name class prototypes.
+*/
+
+#ifndef NAME_H
+#define NAME_H
+
+// Headers
+#include <string>
+#include <fstream>
+#include "field.h"
+
+class Name {
+public:
+	// Constructors
+	Name() : firstName("Unknown"), lastName("Unknown") {}
+	Name(Field fName, Field lName) : firstName(fName), lastName(lName) {}
+
+	// Set Member Functions
+	void setFirstName(std::string fName) { firstName = fName; }
+	void setLastName (std::string lName) { lastName  = lName; }
+
+	// Get Member Functions
+	std::string getFirstName() const { return firstName; }
+	std::string getLastName()  const { return lastName; }
+	
+    // Stream Operators
+	friend std::istream&  operator>>(std::istream &is, Name &nameObj);
+	friend std::ifstream& operator>>(std::ifstream &ifs, Name &nameObj);
+	friend std::ostream&  operator<<(std::ostream &os, const Name &nameObj);
+	friend std::ofstream& operator<<(std::ofstream &ofs, const Name &nameObj);
+	
+private:
+	// Data Members
+	std::string firstName, lastName;
+};
+
+#endif
+

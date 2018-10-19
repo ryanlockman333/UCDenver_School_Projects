@@ -1,0 +1,31 @@
+/*
+Ryan Lockman
+MyFuncts.h
+Stand alone function declarations.
+*/
+
+#ifndef  MYFUNCTS_H
+#define  MYFUNCTS_H
+
+// Headers
+#include <string>
+
+using namespace std;
+
+// Defined Constants
+#define PLAY   1
+#define STOP   0
+#define ERROR -1
+
+// Function Prototypes
+string strToUpper(string str);
+string strToLower(string str);
+char   chrToUpper(char chr);
+char   chrToLower(char chr);
+int    promptYN  (string reply);
+bool   binarySearch(char usedLetters[], int used, char letterToFind);
+void   bubbleSort(char usedLetters[], int used);
+string mask(string str);
+string unmask(char letter, string str, string masked);
+
+#endif

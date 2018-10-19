@@ -1,0 +1,26 @@
+/*
+socketexception.h class prototypes/implementations
+*/
+
+#ifndef SocketException_class
+#define SocketException_class
+
+// Headers
+#include <string>
+
+class SocketException {
+public:
+    // Constructors
+    SocketException() : msg() {} // default
+    SocketException(const std::string str) : msg(str) {};
+
+    // Other Member Functions
+    std::string description() const { return msg; }
+
+private:
+    // Data Members
+    std::string msg;
+};
+
+#endif
+

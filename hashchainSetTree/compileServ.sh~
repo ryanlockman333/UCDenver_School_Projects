@@ -1,0 +1,1 @@
+g++ -g -Wall -pedantic-errors -std=c++11 -lpthread servertest.cpp serversocket.h serversocket.cpp socket.h socket.cpp contact.h contact.cpp  hashchain.h set.h binNode.h field.h field.cpp myfuncts.h myfuncts.cpp -o server.out

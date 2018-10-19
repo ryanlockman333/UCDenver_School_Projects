@@ -1,0 +1,139 @@
+/*
+serverTest.cpp driver file
+*/
+
+// Headers
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <cstdlib>
+#include <string>
+#include <cstring>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include "contact.h"
+#include "hashchain.h" 
+#include "socket.h"
+#include "serversocket.h"
+
+int main(int argc, char **argv) {
+    // Check Arguments
+    if(argc < 2) {
+        std::cout << "\nUsage: " << argv[0] << " [port]\n\n";
+        return 1;
+    }  
+
+    // Declarations
+    HashChain<Contact> Chain; 
+	Contact Record, Grab;
+	unsigned num = 0;
+    float sum = 0;
+    std::string data, pin;
+    int fd = 0;
+    
+    std::cout << "\nServer: waiting for connections...\n";
+
+    // File to Write
+    if((fd = open("data.dat", O_WRONLY, O_CREAT)) == -1) {
+        perror("Server: open file for writing error:");
+        std::cout << "creating file...\n";
+    }
+
+    // Random Pin Numbers To File
+    std::srand((unsigned)time(NULL)); 
+    unsigned int count = 0, i = 0;
+    std::stringstream ss;
+
+    // File Write Variables
+    ssize_t nr = 0;
+    unsigned long buf = 0;
+
+    while(++count <= 100) {
+        i = (std::rand() % 9999)+1;
+        ss << i << ",FirstName,LastName,StreetAddress,City,State,Zip,Phone,Email,Birthday,\n";
+        ss >> buf;
+        
+        if((nr = write(fd, &buf, sizeof buf)) == -1)
+            perror("Server: write file error");
+    }
+    if((close(fd)) == -1)
+        perror("Server: close file error");
+
+    // File to Read
+    if((fd = open("data.dat", 0_RDONLY)) == -1) {
+	perror("Server: open file for reading error");
+	exit(EXIT_FAILURE);
+    }  
+
+    // Fill HashTable From File
+    while(inFile.good()) {
+        inFile >> Record;
+    	Chain.insertRecord(atoi(Record.getPin().c_str()), Record);
+	std::cout << Record << "\n";
+    }
+    inFile.close();  
+	
+    std::cout << "Collisions: " << Chain.getCollisions() << "\n";
+
+        ServerSocket server(atoi(argv[1])); // make listening socket  
+
+        while(true) {                // make conversational socket
+            ServerSocket new_sock;
+            server.accept(new_sock); // wait for connection
+
+            new_sock >> data; // wait to read in pin
+            std::cout << "Server: received: packet\n";
+
+            Record = Contact();
+            Record.setPin(data);
+                
+            if(Chain.find(atoi(data.c_str()), Record, Grab)) {
+                new_sock  << "0001"; // access confirmed
+                std::cout << "Server: sent: packet\n";
+
+                new_sock  >> data; // menu dummy
+                std::cout << "Server: received: packet\n";
+
+                new_sock  << Record.profileOut(); // send menu 
+                std::cout << "Server: sent: packet\n"; 
+                        
+                while(true) { 
+                    new_sock  >> data; // accept menu choice
+                    std::cout << "Server: received: packet\n";
+
+                    // Pocess Choice
+                    switch(std::atoi(data.c_str())) {
+                        case 1:
+                            new_sock  << Grab.getEmail();
+                            std::cout << "Server: sent: packet\n";
+                            break;
+                        case 2:
+                            new_sock  << Grab.getPhone();
+                            std::cout << "Server: sent: packet\n";
+                            break;
+                        case 3:
+                            new_sock  << Grab.getBirthday();
+                            std::cout << "Server: sent: packet\n";
+                            break;
+                        case 4:
+                             new_sock  << "4";
+                             std::cout << "Server: sent: packet\n";
+                              break;
+                        default:
+                            new_sock  << "Error, invalid option\n";
+                             std::cout << "Server: sent: packet\n";
+                    }
+
+                    if(data == "4") // break out of loop to not leak data
+                        break;
+                    else if(data == "")
+                        break;
+                }
+            }    
+        }
+
+    return 0;
+}
+ 

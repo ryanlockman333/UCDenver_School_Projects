@@ -1,0 +1,197 @@
+/*
+ * Ryan
+ * set.cpp Class Initializations
+*/
+
+// Headers
+#include <iostream>
+#include <cassert>
+
+// Copy Constructor
+template<class Type>
+Set<Type>::Set(const Set &rhs) { copySet(rhs); }
+
+// Assignment Operator
+template<class Type>
+void Set<Type>::operator=(const Set &rhs) {
+	if(this != &rhs)
+		copySet(rhs);
+	return;
+}
+	
+// Modification Member Functions
+template<class Type>
+void Set<Type>::insert(const Type &entry) {
+	if(!contains(entry)) {
+		insertTree(entry, root);
+		++used;
+	}
+}
+
+template<class Type>
+void Set<Type>::remove(const Type &target) {
+	/*Node<Type> *targetNode = listSearch(head, target);
+	
+	while(targetNode != NULL) {
+		targetNode->setData(head->getData());
+		targetNode = targetNode->getLink();
+		targetNode = listSearch(targetNode, target);
+		listHeadRemove(head);
+		--used;
+	}*/
+}
+
+// Constant Member Functions
+template<class Type>
+bool Set<Type>::contains(const Type &target) const { return inTree(target, root); }
+
+template<class Type>
+Type Set<Type>::grab(const Type &target) const {
+	const BinNode<Type> *result = inTree(target, root);
+	
+    if(result != NULL)
+	    return result->getData();
+    else
+        return Type();
+}
+
+// Other Member Functions
+template<class Type>
+void Set<Type>::display() const { printTree(root, treeMaxDepth(root)); }
+	
+// Private Member Functions
+template<class Type>
+void Set<Type>::free() {
+	treeClear(root);
+	root = NULL;
+	used = 0;
+}
+
+template<class Type>
+void Set<Type>::copySet(const Set &rhs) {	
+	if(!isEmpty())
+		free();
+		
+	treeCopy(root);
+	used = rhs.used;
+}
+
+/*
+// Non-Member Functions
+template<class set_type>
+void setUnion(const set_type &s1, const set_type &s2, set_type &result) {
+	if(&s1 != &s2) {
+		typename set_type::const_iterator i = NULL;
+
+		for(i = s1.begin(); i != s1.end(); ++i)
+			result.insert(*i);
+		for(i = s2.begin(); i != s2.end(); ++i)
+			result.insert(*i);
+	}
+}
+
+template<class set_type>
+void setIntersection(const set_type &s1, const set_type &s2, set_type &result) {
+	typename set_type::const_iterator i = s1.begin();
+	
+	while(i != s1.end()) {
+		if(s2.contains(*i))    // found
+			result.insert(*i);
+		++i;
+	}
+}
+
+template<class set_type>
+void setDifference(const set_type &s1, const set_type &s2, set_type &result) {
+	if(&s1 != &s2) {
+		typename set_type::const_iterator i = s1.begin();
+		
+		while(i != s1.end()) {
+			if(!s2.contains(*i)) // not found
+				result.insert(*i);
+			++i;
+		}
+	}
+}
+
+template <class set_type>
+void setSymmetricDiff(const set_type &s1, const set_type &s2, set_type &result) {
+	typename set_type::const_iterator i = s1.begin();
+	
+	if(&s1 != &s2) {
+		while(i != s1.end()) {
+			if(!s2.contains(*i)) // not found
+				result.insert(*i);
+			++i;
+		}
+		
+		i = s2.begin();
+		while(i != s2.end()) {
+			if(!s1.contains(*i)) // not found
+				result.insert(*i);
+			++i;
+		}	
+	}
+}
+
+// Union
+template<class set_type>
+set_type operator+(const set_type &s1, const set_type &s2) {
+	set_type tmp;
+	typename set_type::const_iterator i = NULL;
+
+	for(i = s1.begin(); i != s1.end(); ++i)
+		tmp.insert(*i);
+	for(i = s2.begin(); i != s2.end(); ++i)
+		tmp.insert(*i);
+	return tmp;
+}
+
+// Intersection
+template<class set_type>
+set_type operator&(const set_type &s1, const set_type &s2) {
+	set_type tmp;
+	typename set_type::const_iterator i = s1.begin();
+	
+	while(i != s1.end()) {
+		if(s2.contains(*i))
+			tmp.insert(*i);
+		++i;
+	}
+	return tmp;
+}
+
+// Difference
+template<class set_type>
+set_type operator-(const set_type &s1, const set_type &s2) {
+	set_type tmp;
+	typename set_type::const_iterator i = s1.begin();
+		
+	while(i != s1.end()) {
+		if(!s2.contains(*i)) // not found
+			tmp.insert(*i);
+		++i;
+	}
+	return tmp;
+}
+
+template<class set_type>
+bool operator==(const set_type &s1, const set_type &s2) {
+	typename set_type::const_iterator i = s1.begin();
+	
+	while(i != s1.end()) {
+		if(!s2.contains(*i)) // not found
+			return false;
+		++i;
+	}
+	
+	i = s2.begin();
+	while(i != s2.end()) {
+		if(!s1.contains(*i)) // not found
+			return false;
+		++i;
+	}
+ 
+	return true;
+}*/
+

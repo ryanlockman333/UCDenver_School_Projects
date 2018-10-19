@@ -1,0 +1,46 @@
+/*
+Ryan Lockman
+address.h
+Description: Address class prototypes.
+*/
+
+#ifndef ADDRESS_H
+#define ADDRESS_H
+
+// Headers
+#include <string>
+#include <fstream>
+#include "field.h"
+
+class Address {
+public:
+	// Constructors
+	Address() : street("Unknown"), city("Unknown"), state("Unknown"), zip("Unknown") {}
+	Address(std::string stIn, std::string cityIn, std::string stateIn, std::string zipIn)
+              : street(stIn), city(cityIn), state(stateIn), zip(zipIn) {}
+
+	// Set Member Functions
+	void setStreet(Field streetIn) { street = streetIn; }
+	void setCity  (Field cityIn)   { city   = cityIn; }
+	void setState (Field stateIn)  { state  = stateIn; }
+	void setZip   (Field zipIn)    { zip    = zipIn; }
+
+	// Get Member Functions
+	std::string getStreet() const { return street; }
+	std::string getCity()   const { return city; }
+	std::string getState()  const { return state; }
+	std::string getZip()    const { return zip; }
+	
+	// Stream Operators
+	friend std::istream&  operator>>(std::istream &is, Address &addrObj);
+	friend std::ifstream& operator>>(std::ifstream &ifs, Address &addrObj);
+	friend std::ostream&  operator<<(std::ostream &os, const Address &addrObj);
+	friend std::ofstream& operator<<(std::ofstream &ofs, const Address &addrObj);
+
+private:
+	// Data Members
+	std::string street, city, state, zip;
+};
+
+#endif
+

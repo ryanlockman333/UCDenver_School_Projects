@@ -1,0 +1,92 @@
+/*
+Ryan
+Access Driver File
+*/
+
+// Headers
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+#include "contact.h"
+#include "hashchain.h"
+
+// Constants
+const unsigned int TOTAL = 1;
+
+int main() {
+	// Declarations
+    HashChain<Contact> Chain; 
+	Contact Record, Grab;
+	unsigned num = 0;
+    float sum = 0;
+    std::string pin;
+
+    // Loop Program to Average
+    std::srand((unsigned)time(NULL));
+    while(++num <= TOTAL) {
+        // File to Write
+        std::ofstream outFile("data.dat");
+        if(!outFile) {
+            std::cout << "\nError, opening file for writing\n";
+            return -1;
+        }
+
+        // Number of Table Insertions
+        unsigned int count = 0, i = 0;
+        while(++count <= 5) {
+            i = (std::rand() % 9999)+1;
+            outFile << i << ",FirstName,LastName,StreetAddress,City,State,Zip,Phone,Email,Birthday,\n";
+        }
+        outFile.close();
+
+        // File to Read
+        std::ifstream inFile("data.dat");
+        if(!inFile) {
+            std::cout << "\nError, opening file for reading\n";
+            return -2;
+        }
+
+        // Fill File
+        while(inFile.good()) {
+            inFile >> Record;
+    	    Chain.insertRecord(atoi(Record.getPin().c_str()), Record);
+
+            std::cout << Record;
+        }
+        inFile.close();
+    
+        // Sum Collisions
+        sum += Chain.getCollisions();
+        std::cout << "\nTotal Collisions: " << sum;  
+
+        // Reset Table
+        //Chain = HashChain<Data>();
+        //std::cout << "\nReset HashChain: " << Chain.getCollisions();
+    }
+
+    // Output Average
+    std::cout << "\nSum: " << sum;
+    std::cout << "\n\nAverage Collisons: " << sum/TOTAL;
+    std::cout << "\nIndex's Left: " << Chain.checkIndexLeft() << "\n";
+
+    Chain.printHashChain();
+    std::cout << "\n" << Chain.size() << "\n";
+
+
+    // Prompt
+    Record = Contact(); // reset
+    std::cout << "\nEnter in your 3-digit pin: ";
+	std::cin  >> pin;
+    Record.setPin(pin);
+
+    // Check                                         
+    if(Chain.find(atoi(pin.c_str()), Record, Grab))
+	    std::cout << "\nAccess Granted\n";
+	else
+		std::cout << "\nAccess Denied\n";
+
+    std::cout << "\nHello: " << Grab.getFirstName() << "\n";
+
+	return 0;
+}
+

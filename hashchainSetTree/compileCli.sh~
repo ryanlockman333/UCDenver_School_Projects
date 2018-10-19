@@ -1,0 +1,1 @@
+g++ -g -std=c++11 -Wall clientTest.cpp clientsocket.h clientsocket.cpp socket.h socket.cpp -o client.out

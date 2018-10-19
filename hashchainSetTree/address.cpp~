@@ -1,0 +1,57 @@
+/*
+Ryan Lockman
+address.cpp
+Description: Address class prototypes.
+*/
+
+// Headers
+#include <iostream>
+#include "address.h"
+
+// Stream Operators
+std::istream& operator>>(std::istream &is, Address &addrObj) {
+	Field fld;
+
+	std::cout << "Please enter Street Address: ";
+	is >> fld;
+	addrObj.setStreet(fld);
+	std::cout << "Please enter City:           ";
+	is >> fld;
+	addrObj.setCity(fld);
+	std::cout << "Please enter State(AB):      ";
+	is >> fld;
+	addrObj.setState(fld);
+	std::cout << "Please enter Zip Code:       ";
+	is >> fld;
+	addrObj.setZip(fld);
+
+	return is;
+}
+
+std::ifstream& operator>>(std:ifstream &ifs, Address &addrObj) {
+	Field fld;
+
+	ifs >> fld;
+	addrObj.setStreet(fld);
+	ifs >> fld;
+	addrObj.setCity(fld);
+	ifs >> fld;
+	addrObj.setState(fld);
+	ifs >> fld;
+	addrObj.setZip(fld);
+
+	return ifs;
+}
+
+std::ostream& operator<<(std::ostream &os, const Address &addrObj) {
+	os << addrObj.getStreet() << "\n" << addrObj.getCity() << ", "
+       << addrObj.getState()  << " "  << addrObj.getZip()  << "\n";
+	return os;
+}
+
+std::ofstream& operator<<(std::ofstream &ofs, const Address &addrObj) {
+	ofs << addrObj.getStreet() << "," << addrObj.getCity() << ","
+		<< addrObj.getState()  << "," << addrObj.getZip()  << ",";
+	return ofs;
+}
+
